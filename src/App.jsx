@@ -1,31 +1,19 @@
 // import home from "./pages/Home"
-
-
-// import Chai from './Chai.jsx'  
-// function App() {
-//   return (
-//     <div>
-//       <h1> React App</h1>
-//       <Chai />
-//     </div>
-//   )
-// }
-
-
-
 import Chai from './Chai.jsx' 
 
 function App() {
-  return (   
-    <div>
-      <h1>Hello</h1>
-      <Chai />  
-    </div>
+  const username = "chai aur code"
+
+  return (
+    <>
+      <Chai/>
+      <h1>chai aur react {username}</h1>
+      <p>test para</p>
+    </>
   )
 }
 
 export default App
-
 // import { useState } from "react";
 // import "./App.css";
 
