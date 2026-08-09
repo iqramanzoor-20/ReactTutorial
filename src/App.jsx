@@ -53,13 +53,3 @@ import './index.css'
 
 // export default App
 
-
-3
-function App() {
-  return (
-    <div className="flex justify-center items-center h-screen bg-purple-500">
-      <h1 className="text-5xl font-bold text-white">Tailwind run</h1>
-    </div>
-  )
-}
-export default App
