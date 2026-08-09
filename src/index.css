@@ -2,3 +2,42 @@
 body {
   background-color: #1a1a1a;
 } */
+
+/* 8 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0b0b;
+  color: #ffffff;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background: #ffffff;
+  color: #000000;
+}

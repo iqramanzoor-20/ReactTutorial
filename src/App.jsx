@@ -217,31 +217,87 @@
 
 // 7
 
-import { Routes, Route, Link } from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
+// import { Routes, Route, Link } from 'react-router-dom'
+// import Home from './pages/Home'
+// import About from './pages/About'
+// import Contact from './pages/Contact'
+
+// function App() {
+//   return (
+//     <div>
+//       {/* Navbar */}
+//       <nav style={{padding: '20px', background: '#333', display: 'flex', gap: '20px'}}>
+//         <Link to="/" style={{color: 'white', textDecoration: 'none'}}>Home</Link>
+//         <Link to="/about" style={{color: 'white', textDecoration: 'none'}}>About</Link>
+//         <Link to="/contact" style={{color: 'white', textDecoration: 'none'}}>Contact</Link>
+//       </nav>
+
+//       {/* Pages */}
+//       <div style={{padding: '20px'}}>
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<About />} />
+//           <Route path="/contact" element={<Contact />} />
+//         </Routes>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// 8
+
+import Navbar from "./component/08Navbar";  // 08 laga do
+import Card from "./component/08Card";      // 08 laga do
+import Button from "./component/08Button";  // 08 laga do
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      {/* Navbar */}
-      <nav style={{padding: '20px', background: '#333', display: 'flex', gap: '20px'}}>
-        <Link to="/" style={{color: 'white', textDecoration: 'none'}}>Home</Link>
-        <Link to="/about" style={{color: 'white', textDecoration: 'none'}}>About</Link>
-        <Link to="/contact" style={{color: 'white', textDecoration: 'none'}}>Contact</Link>
-      </nav>
+    <div className="app">
 
-      {/* Pages */}
-      <div style={{padding: '20px'}}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
+      <Navbar />
+
+      <main className="container">
+
+        <h1>React Components</h1>
+
+        <p>
+          This project demonstrates reusable React components.
+        </p>
+
+        <div className="cards">
+
+          <Card
+            number="01"
+            title="Navbar Component"
+            description="A reusable navigation bar component."
+          />
+
+          <Card
+            number="02"
+            title="Card Component"
+            description="A reusable card for displaying information."
+          />
+
+          <Card
+            number="03"
+            title="Button Component"
+            description="A reusable button component."
+          />
+
+        </div>
+
+        <div className="button-section">
+          <Button text="Start Learning" />
+          <Button text="Explore React" />
+        </div>
+
+      </main>
+
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
