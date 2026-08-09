@@ -24,15 +24,24 @@
 // export default App;
 
 
-3
-import UserCard from "./Component/03UserCard";
+// 3
+// import UserCard from "./Component/03UserCard";
 
+// function App() {
+//   return (
+//     <div>
+//       <UserCard username="Chai" role="Dev" />
+//     </div>
+//   )
+// }
+
+// export default App
 function App() {
   return (
     <div>
-      <UserCard username="Chai" role="Dev" />
+      <h1>Hello React</h1>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
