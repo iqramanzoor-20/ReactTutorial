@@ -11,14 +11,28 @@
 
 // export default App
 
-import Counter from "./Component/Counter";
+// import Counter from "./Component/Counter";
+
+// function App() {
+//   return (
+//     <div>
+//       <Counter />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+3
+import UserCard from "./Component/03UserCard";
 
 function App() {
   return (
     <div>
-      <Counter />
+      <UserCard username="Chai" role="Dev" />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
