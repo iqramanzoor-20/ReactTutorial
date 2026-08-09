@@ -176,41 +176,72 @@
 
 // export default App;
 
-// 6
-import { useState } from "react";
+// // 6
+// import { useState } from "react";
+
+// function App() {
+//   const [amount, setAmount] = useState("");
+//   const [result, setResult] = useState("");
+
+//   const convert = () => {
+//     setResult(amount * 280);
+//   };
+
+//   return (
+//     <div className="h-screen flex flex-col items-center justify-center gap-4">
+//       <h1 className="text-3xl font-bold">Currency Converter</h1>
+
+//       <input
+//         type="number"
+//         placeholder="Enter USD"
+//         value={amount}
+//         onChange={(e) => setAmount(e.target.value)}
+//         className="border p-3 rounded"
+//       />
+
+//       <button
+//         onClick={convert}
+//         className="bg-blue-500 text-white px-5 py-2 rounded"
+//       >
+//         Convert
+//       </button>
+
+//       <h2 className="text-xl">
+//         {result && `${result} PKR`}
+//       </h2>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// 7
+
+import { Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
 
 function App() {
-  const [amount, setAmount] = useState("");
-  const [result, setResult] = useState("");
-
-  const convert = () => {
-    setResult(amount * 280);
-  };
-
   return (
-    <div className="h-screen flex flex-col items-center justify-center gap-4">
-      <h1 className="text-3xl font-bold">Currency Converter</h1>
+    <div>
+      {/* Navbar */}
+      <nav style={{padding: '20px', background: '#333', display: 'flex', gap: '20px'}}>
+        <Link to="/" style={{color: 'white', textDecoration: 'none'}}>Home</Link>
+        <Link to="/about" style={{color: 'white', textDecoration: 'none'}}>About</Link>
+        <Link to="/contact" style={{color: 'white', textDecoration: 'none'}}>Contact</Link>
+      </nav>
 
-      <input
-        type="number"
-        placeholder="Enter USD"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-        className="border p-3 rounded"
-      />
-
-      <button
-        onClick={convert}
-        className="bg-blue-500 text-white px-5 py-2 rounded"
-      >
-        Convert
-      </button>
-
-      <h2 className="text-xl">
-        {result && `${result} PKR`}
-      </h2>
+      {/* Pages */}
+      <div style={{padding: '20px'}}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
