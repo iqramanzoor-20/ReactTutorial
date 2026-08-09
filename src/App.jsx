@@ -36,10 +36,30 @@
 // }
 
 // export default App
+
+
+// 4
+import { useState } from "react";
+
 function App() {
+  const [color, setColor] = useState("red");
+
   return (
-    <div>
-      <h1>Hello React</h1>
+    <div
+      style={{
+        backgroundColor: color,
+        height: "100vh",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "10px",
+      }}
+    >
+      <button onClick={() => setColor("red")}>Red</button>
+      <button onClick={() => setColor("blue")}>Blue</button>
+      <button onClick={() => setColor("green")}>Green</button>
+      <button onClick={() => setColor("yellow")}>Yellow</button>
     </div>
   );
 }
