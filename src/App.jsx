@@ -303,19 +303,46 @@
 // export default App;
 
 // 9
-import { useUser } from "./Context/UserContext.jsx";
+
+// import { useUser } from "./Context/UserContext.jsx";
+
+// function App() {
+//   const { user, setUser } = useUser();
+
+//   return (
+//     <>
+//       <h1>Hello {user}</h1>
+
+//       <button onClick={() => setUser("Ahmed")}>
+//         Change User
+//       </button>
+//     </>
+//   );
+// }
+
+// export default App;
+
+// 10
+import { useEffect } from "react";
+import ThemeSwitcher from "./component/10ThemeSwitcher";
+import { useTheme } from "./Context/10ThemeContext";
 
 function App() {
-  const { user, setUser } = useUser();
+  const { themeMode } = useTheme();
+
+  useEffect(() => {
+    document.body.style.backgroundColor =
+      themeMode === "dark" ? "#212121" : "#ffffff";
+
+    document.body.style.color =
+      themeMode === "dark" ? "#ffffff" : "#000000";
+  }, [themeMode]);
 
   return (
-    <>
-      <h1>Hello {user}</h1>
-
-      <button onClick={() => setUser("Ahmed")}>
-        Change User
-      </button>
-    </>
+    <div>
+      <h1>Theme Switcher</h1>
+      <ThemeSwitcher />
+    </div>
   );
 }
 

@@ -65,13 +65,29 @@
 // )
 
 // 9
+
+// import { createRoot } from "react-dom/client";
+// import App from "./App.jsx";
+// import { UserProvider } from "./Context/UserContext";
+// import "./index.css"; // ye line bhi ho
+
+// createRoot(document.getElementById("root")).render(
+//   <UserProvider>
+//     <App />
+//   </UserProvider>
+// );
+
+// 10
+
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import { UserProvider } from "./Context/UserContext";
-import "./index.css"; // ye line bhi ho
+import { ThemeProvider } from "./Context/10ThemeContext.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <UserProvider>
-    <App />
-  </UserProvider>
+  <StrictMode>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </StrictMode>
 );
