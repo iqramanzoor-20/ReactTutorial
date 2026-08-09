@@ -248,55 +248,74 @@
 
 // 8
 
-import Navbar from "./component/08Navbar";  // 08 laga do
-import Card from "./component/08Card";      // 08 laga do
-import Button from "./component/08Button";  // 08 laga do
-import "./App.css";
+// import Navbar from "./component/08Navbar";  // 08 laga do
+// import Card from "./component/08Card";      // 08 laga do
+// import Button from "./component/08Button";  // 08 laga do
+// import "./App.css";
+
+// function App() {
+//   return (
+//     <div className="app">
+
+//       <Navbar />
+
+//       <main className="container">
+
+//         <h1>React Components</h1>
+
+//         <p>
+//           This project demonstrates reusable React components.
+//         </p>
+
+//         <div className="cards">
+
+//           <Card
+//             number="01"
+//             title="Navbar Component"
+//             description="A reusable navigation bar component."
+//           />
+
+//           <Card
+//             number="02"
+//             title="Card Component"
+//             description="A reusable card for displaying information."
+//           />
+
+//           <Card
+//             number="03"
+//             title="Button Component"
+//             description="A reusable button component."
+//           />
+
+//         </div>
+
+//         <div className="button-section">
+//           <Button text="Start Learning" />
+//           <Button text="Explore React" />
+//         </div>
+
+//       </main>
+
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// 9
+import { useUser } from "./Context/UserContext.jsx";
 
 function App() {
+  const { user, setUser } = useUser();
+
   return (
-    <div className="app">
+    <>
+      <h1>Hello {user}</h1>
 
-      <Navbar />
-
-      <main className="container">
-
-        <h1>React Components</h1>
-
-        <p>
-          This project demonstrates reusable React components.
-        </p>
-
-        <div className="cards">
-
-          <Card
-            number="01"
-            title="Navbar Component"
-            description="A reusable navigation bar component."
-          />
-
-          <Card
-            number="02"
-            title="Card Component"
-            description="A reusable card for displaying information."
-          />
-
-          <Card
-            number="03"
-            title="Button Component"
-            description="A reusable button component."
-          />
-
-        </div>
-
-        <div className="button-section">
-          <Button text="Start Learning" />
-          <Button text="Explore React" />
-        </div>
-
-      </main>
-
-    </div>
+      <button onClick={() => setUser("Ahmed")}>
+        Change User
+      </button>
+    </>
   );
 }
 
