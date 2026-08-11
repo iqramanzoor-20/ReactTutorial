@@ -350,15 +350,25 @@
 // export default App;
 
 // 11
+
+// import Todo from "./Component/Todo";
+// import { TodoProvider } from "./11TodoContextLocal";
+
+// function App() {
+//   return (
+//     <TodoProvider>
+//       <Todo />
+//     </TodoProvider>
+//   );
+// }
+
+// export default App;
+
+// 12
 import Todo from "./Component/Todo";
-import { TodoProvider } from "./11TodoContextLocal";
 
 function App() {
-  return (
-    <TodoProvider>
-      <Todo />
-    </TodoProvider>
-  );
+  return <Todo />;
 }
 
 export default App;

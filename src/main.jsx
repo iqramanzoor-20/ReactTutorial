@@ -79,15 +79,32 @@
 
 // 10
 
+// import { StrictMode } from "react";
+// import { createRoot } from "react-dom/client";
+// import App from "./App.jsx";
+// import { ThemeProvider } from "./Context/10ThemeContext.jsx";
+
+// createRoot(document.getElementById("root")).render(
+//   <StrictMode>
+//     <ThemeProvider>
+//       <App />
+//     </ThemeProvider>
+//   </StrictMode>
+// );
+
+
+// 12
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+
 import App from "./App.jsx";
-import { ThemeProvider } from "./Context/10ThemeContext.jsx";
+import { store } from "./store.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ThemeProvider>
+    <Provider store={store}>
       <App />
-    </ThemeProvider>
+    </Provider>
   </StrictMode>
 );

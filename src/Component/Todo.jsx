@@ -1,16 +1,64 @@
 
+// import { useState } from "react";
+// import { useTodo } from "../11TodoContextLocal";
+
+// function Todo() {
+//   const [text, setText] = useState("");
+
+//   const { todos, addTodo, deleteTodo } = useTodo();
+
+//   const handleAdd = () => {
+//     if (text.trim() === "") return;
+
+//     addTodo(text);
+//     setText("");
+//   };
+
+//   return (
+//     <div>
+//       <h1>Todo App</h1>
+
+//       <input
+//         type="text"
+//         placeholder="Enter todo"
+//         value={text}
+//         onChange={(e) => setText(e.target.value)}
+//       />
+
+//       <button onClick={handleAdd}>Add</button>
+
+//       <ul>
+//         {todos.map((todo) => (
+//           <li key={todo.id}>
+//             {todo.text}
+
+//             <button onClick={() => deleteTodo(todo.id)}>
+//               Delete
+//             </button>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default Todo;
+
+// 12
 import { useState } from "react";
-import { useTodo } from "../11TodoContextLocal";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo, deleteTodo } from "../todoSlice";
 
 function Todo() {
   const [text, setText] = useState("");
 
-  const { todos, addTodo, deleteTodo } = useTodo();
+  const todos = useSelector((state) => state.todo.todos);
+  const dispatch = useDispatch();
 
   const handleAdd = () => {
     if (text.trim() === "") return;
 
-    addTodo(text);
+    dispatch(addTodo(text));
     setText("");
   };
 
@@ -20,9 +68,9 @@ function Todo() {
 
       <input
         type="text"
-        placeholder="Enter todo"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        placeholder="Enter Todo"
       />
 
       <button onClick={handleAdd}>Add</button>
@@ -32,7 +80,7 @@ function Todo() {
           <li key={todo.id}>
             {todo.text}
 
-            <button onClick={() => deleteTodo(todo.id)}>
+            <button onClick={() => dispatch(deleteTodo(todo.id))}>
               Delete
             </button>
           </li>
