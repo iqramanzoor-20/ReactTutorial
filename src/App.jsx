@@ -364,11 +364,26 @@
 
 // export default App;
 
-// 12
-import Todo from "./Component/Todo";
+// // 12
+// import Todo from "./Component/Todo";
+
+// function App() {
+//   return <Todo />;
+// }
+
+// export default App;
+
+// 13
+import PostCard from "./component/13PostCard";
 
 function App() {
-  return <Todo />;
+  return (
+    <div>
+      <h1>MegaBlog</h1>
+
+      <PostCard />
+    </div>
+  );
 }
 
 export default App;
