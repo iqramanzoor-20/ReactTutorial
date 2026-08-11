@@ -323,26 +323,41 @@
 // export default App;
 
 // 10
-import { useEffect } from "react";
-import ThemeSwitcher from "./component/10ThemeSwitcher";
-import { useTheme } from "./Context/10ThemeContext";
+
+// import { useEffect } from "react";
+// import ThemeSwitcher from "./component/10ThemeSwitcher";
+// import { useTheme } from "./Context/10ThemeContext";
+
+// function App() {
+//   const { themeMode } = useTheme();
+
+//   useEffect(() => {
+//     document.body.style.backgroundColor =
+//       themeMode === "dark" ? "#212121" : "#ffffff";
+
+//     document.body.style.color =
+//       themeMode === "dark" ? "#ffffff" : "#000000";
+//   }, [themeMode]);
+
+//   return (
+//     <div>
+//       <h1>Theme Switcher</h1>
+//       <ThemeSwitcher />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// 11
+import Todo from "./Component/Todo";
+import { TodoProvider } from "./11TodoContextLocal";
 
 function App() {
-  const { themeMode } = useTheme();
-
-  useEffect(() => {
-    document.body.style.backgroundColor =
-      themeMode === "dark" ? "#212121" : "#ffffff";
-
-    document.body.style.color =
-      themeMode === "dark" ? "#ffffff" : "#000000";
-  }, [themeMode]);
-
   return (
-    <div>
-      <h1>Theme Switcher</h1>
-      <ThemeSwitcher />
-    </div>
+    <TodoProvider>
+      <Todo />
+    </TodoProvider>
   );
 }
 
