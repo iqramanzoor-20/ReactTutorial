@@ -1,10 +1,10 @@
 
-function Button({ children, onClick }) {
-  return (
-    <button className="primary-btn" onClick={onClick}>
-      {children}
-    </button>
-  );
-}
+// function Button({ children, onClick }) {
+//   return (
+//     <button className="primary-btn" onClick={onClick}>
+//       {children}
+//     </button>
+//   );
+// }
 
-export default Button;
+// export default Button;

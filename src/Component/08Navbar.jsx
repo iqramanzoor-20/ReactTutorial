@@ -1,9 +1,9 @@
-function Navbar() {
-  return (
-    <nav>
-      <h2>My React App</h2>
-    </nav>
-  );
-}
+// function Navbar() {
+//   return (
+//     <nav>
+//       <h2>My React App</h2>
+//     </nav>
+//   );
+// }
 
-export default Navbar;
+// export default Navbar;

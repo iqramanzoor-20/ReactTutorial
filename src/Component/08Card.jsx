@@ -1,14 +1,14 @@
 
-function Card({ number, title, description }) {
-  return (
-    <div className="topic-card">
-      <span>{number}</span>
+// function Card({ number, title, description }) {
+//   return (
+//     <div className="topic-card">
+//       <span>{number}</span>
 
-      <h3>{title}</h3>
+//       <h3>{title}</h3>
 
-      <p>{description}</p>
-    </div>
-  );
-}
+//       <p>{description}</p>
+//     </div>
+//   );
+// }
 
-export default Card;
+// export default Card;
